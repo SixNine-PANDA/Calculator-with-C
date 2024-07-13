@@ -36,9 +36,14 @@ int main(){
                 break;
             case 2:
                 printf("You have selected Subtraction\n");
-                int a,b;
                 int subtraction=0;
-            
+                printf("Enter the first number: \n");
+                scanf("%d", &a);
+                printf("Enter the second number: \n");
+                scanf("%d", &b);
+                subtraction = a - b;
+                printf("Subtraction of the two numbers are: %d \n", subtraction);
+                printf("-----------------\n");                
                 break;
             case 3:
                 printf("You have selected Multiplication\n");
