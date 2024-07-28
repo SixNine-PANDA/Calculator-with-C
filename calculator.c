@@ -1,6 +1,61 @@
 #include<stdio.h>
 #include <stdbool.h>
 #include<math.h>
+double additionOfTwoNumbers(){
+    double a,b;
+    printf("You have selected Addition\n");
+    printf("Enter the first numbers: \n");
+    scanf("%lf", &a);
+    printf("Enter the second number: \n");
+    scanf("%lf", &b);
+    double sum =0;
+    sum=a+b;
+    return sum;
+}
+double subtractionoftwonumbers(){
+    double a,b;
+    printf("You have selected Subtraction\n");
+    printf("Enter the first number: \n");
+    scanf("%lf", &a);
+    printf("Enter the second number: \n");
+    scanf("%lf", &b);    
+    double subtraction = 0;
+    subtraction=a-b;
+    return subtraction;
+}
+double multiplicationoftwonumbers(){
+    double a,b;
+    printf("You have selected Multiplication\n");
+    printf("Enter the first number: \n");
+    scanf("%lf", &a);
+    printf("Enter the second number: \n");
+    scanf("%lf", &b);
+    double multiplication = 0;
+    multiplication= a*b;
+    return multiplication;
+}
+double divisionoftwonumbers(){
+    double a,b;
+    printf("You have selected Division\n");
+    printf("Enter the first number: \n");
+    scanf("%lf", &a);
+    printf("Enter the second number: \n");
+    scanf("%lf", &b);
+    double division=0;
+    division = a/b;
+    return division;
+
+}
+double squarerootoftwonumbers(){
+    double a;
+    printf("You have selected square root\n");
+    printf("Enter the number: \n");
+    scanf("%lf", &a);
+    double squareroot=0;
+    squareroot=sqrt(a);
+    return squareroot;
+}
+
 
 int main(){
 
@@ -25,57 +80,32 @@ int main(){
             switch (number)
             {
             case 1:
-                printf("You have selected Addition\n");
-                double a,b;
-                double sum=0;
-                printf("Enter the first numbers: \n");
-                scanf("%lf", &a);
-                printf("Enter the second number: \n");
-                scanf("%lf", &b);
-                sum = a + b;
+                double sum = additionOfTwoNumbers();
                 printf("Addition of the two numbers are: %lf \n", sum);
                 printf("-----------------\n");           
                 break;
             case 2:
-                printf("You have selected Subtraction\n");
-                double subtraction=0;
-                printf("Enter the first number: \n");
-                scanf("%lf", &a);
-                printf("Enter the second number: \n");
-                scanf("%lf", &b);
-                subtraction = a - b;
+                
+                double subtraction = subtractionoftwonumbers();
                 printf("Subtraction of the two numbers are: %lf \n", subtraction);
                 printf("-----------------\n");                
                 break;
             case 3:
-                printf("You have selected Multiplication\n");
-                double multiplication=0;
-                printf("Enter the first number: \n");
-                scanf("%lf", &a);
-                printf("Enter the second number: \n");
-                scanf("%lf", &b);
-                multiplication = a * b;
+                
+                double multiplication = multiplicationoftwonumbers();
                 printf("Multiplication of the two numbers are: %lf \n", multiplication);
                 printf("-----------------\n");
                 break;
             case 4:
-                printf("You have selected Division\n");
-                double division=0;
-                printf("Enter the first number: \n");
-                scanf("%lf", &a);
-                printf("Enter the second number: \n");
-                scanf("%lf", &b);
-                division= a / b;
+               
+                double division= divisionoftwonumbers();
                 printf("Division of the two numbers are: %lf \n", division);
                 printf("-----------------\n"); 
             case 5:
-                printf("You have selected square root");
-                double squareroot=0;
-                printf("Enter the number: \n");
-                scanf("%lf", &a);
-                squareroot= sqrt(a);
+                
+                double squareroot= squarerootoftwonumbers();
                 printf("square root of the number is: %.2lf \n", squareroot);
-                printf("-----------------\n"); 
+                printf("-----------------\n");    
 
             default:
                 break;
@@ -87,7 +117,7 @@ int main(){
             printf("Enter a valid Number\n");
         }
 
-    }while (menuScreen);  
+    }while (menuScreen);       
     
     return 0;
 }
